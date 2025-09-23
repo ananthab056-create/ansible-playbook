@@ -1,0 +1,13 @@
+---
+- name: user creation
+  hosts: all
+  tasks:
+    - name: user name create
+      user:
+        name: anu
+        password: ananth
+        uid: 1234
+        comment: i am super user
+        home: /tmp/anu
+        shell: /bin/bash
+...

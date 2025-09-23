@@ -1,0 +1,14 @@
+---
+- name: intall a git clone a file
+  hosts: all
+  tasks:
+    - name: install a git
+      apt:
+        name: git
+        state: present
+        update_cache: yes
+    - name: clone a file
+      git:
+        repo: https://github.com/IntelliqDevops/FunctionalTesting.git
+        dest: /tmp/mygit
+...

@@ -1,0 +1,12 @@
+---
+- name: copy /etc/passwd file from controller to remote
+  hosts: all
+  tasks:
+    - name: copy file
+      copy:
+        src: /etc/passwd
+        dest: /tmp
+        owner: anu
+        group: root
+        mode: 750
+...

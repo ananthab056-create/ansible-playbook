@@ -1,0 +1,16 @@
+---
+- name: create a folder and download jenkins file
+  hosts: all
+  tasks:
+    - name: create a folder
+      file:
+        name: /tmp/mydir
+        state: directory
+        owner: anu
+        group: root
+        mode: 777
+    - name: download jenkins file
+      get_url:
+        url: https://get.jenkins.io/war-stable/2.516.3/jenkins.war
+        dest: /tmp/mydir
+...
